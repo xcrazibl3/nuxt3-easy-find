@@ -1,0 +1,54 @@
+{
+  "plugins": ["stylelint-scss", "stylelint-order"],
+  "overrides": [
+    {
+      "files": ["**/*.(scss|css|html|vue)"],
+      "customSyntax": "postcss-scss"
+    },
+    {
+      "files": ["**/*.(html|vue)"],
+      "customSyntax": "postcss-html"
+    }
+  ],
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "selector-class-pattern": "^[a-z]+[a-zA-Z0-9-_]+$",
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "color-hex-length": null,
+    "declaration-empty-line-before": null,
+    "indentation": 4,
+    "no-missing-end-of-source-newline": true,
+    "number-leading-zero": ["never"],
+    "rule-empty-line-before": ["always", {
+      "except": ["first-nested", "after-single-line-comment"],
+      "ignore": "after-comment"
+    }],
+    "at-rule-empty-line-before": ["always", {
+      "except": ["first-nested", "blockless-after-blockless"],
+      "ignore": "after-comment"
+    }],
+    "selector-list-comma-newline-after": null,
+    "order/properties-order": [
+      "display", "visibility", "position", "box-sizing", "z-index",
+      "top", "right", "bottom", "left",
+      "width", "min-width", "max-width",
+      "height", "min-height", "max-height",
+      "margin", "margin-top", "margin-right", "margin-bottom", "margin-left",
+      "padding", "padding-top", "padding-right", "padding-bottom", "padding-left",
+      "grid-area", "grid-template", "grid-gap",
+      "flex", "flex-direction", "flex-flow", "flex-grow", "flex-wrap",
+      "justify-content", "align-content", "align-items", "align-self",
+      "order", "float", "clear", "overflow", "overflow-x", "owerflow-y",
+      "transform", "border", "border-top", "border-right", "border-bottom", "border-left",
+      "border-width", "border-radius", "border-top-left-radius", "border-top-right-radius",
+      "border-bottom-right-radius", "border-bottom-left-radius", "border-color",
+      "outline", "opacity", "color", "background", "background-color", "background-image",
+      "background-repeat", "background-position", "background-size", "box-shadow",
+      "object-position", "object-fit", "fill",
+      "font", "font-family", "font-size", "font-weight", "letter-spacing", "line-height",
+      "list-style", "text-decoration", "text-shadow", "text-align", "vertical-align",
+      "white-space", "cursor"
+    ]
+  }
+}
